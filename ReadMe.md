@@ -131,3 +131,23 @@ You can change the role of a node running:
 ```
 docker node ls
 ```
+
+* Running Docker Swarm Visualizer service
+
+```
+docker service create \
+  --name=viz \
+  --publish=8080:8080/tcp \
+  --constraint=node.role==manager \
+  --mount=type=bind,src=/var/run/docker.sock,dst=/var/run/docker.sock \
+  alexellis2/visualizer-arm:latest
+```
+
+After the service creation, check the status by typing:
+
+```
+docker service ls
+```
+
+If REPLICAS value is 1/1, so the service is ready.
+You can visit any node on port 8080 to see the service running, e.g.: http://pi-1:8080/
