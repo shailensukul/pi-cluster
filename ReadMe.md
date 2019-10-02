@@ -154,4 +154,4 @@ docker service ls
 If REPLICAS value is 1/1, so the service is ready.
 You can visit any node on port 8080 to see the service running, e.g.: http://pi-1:8080/
 
-![Pi Visualizer](/images/pi-visualizer.jpg)
+![Pi Visualizer](/images/pi-visualizer.JPG)
