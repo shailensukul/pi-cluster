@@ -83,8 +83,8 @@ ssh pi@pi-1
 
 * First, in each Pi, create another user (do not use root) and give it admin privileges:
 ```
-adduser dockeradmin
-usermod -aG sudo dockeradmin
+sudo adduser dockeradmin
+sudo usermod -aG sudo dockeradmin
 logout
 ```
 
