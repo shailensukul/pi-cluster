@@ -97,6 +97,8 @@ ssh dockeradmin@pi-1
 ```
 curl -fsSL https://get.docker.com | sh
 ```
+[![install docker](https://asciinema.org/a/GNBxJGp0R9vnwul06a3qyUI7Y.svg)](https://asciinema.org/a/GNBxJGp0R9vnwul06a3qyUI7Y)
+
 
 *  Create Swarm cluster
 Initialize the Swarm cluster on the first node (e.g., node0 with ip 192.168.0.20)
