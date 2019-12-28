@@ -45,6 +45,28 @@ network={
 
 ## Discovering the IP Addresses of the Pis
 
+* Connect the Pi devices to your network
+
+* On a PC connected to the same network, discover your PC ip address
+
+(On Windows 10)
+```
+ipconfig 
+```
+
+* Install nmap on WSL (Windows Subsystem for Linux)
+```
+sudo apt install nmap
+```
+
+* Use nmap to poll the devices on your network, using your ip address from above
+```
+nmap -sn 192.168.86.41/24 
+```
+
+* You will the raspberry pis listed with the pi's hostname
+
+![NMap Results](/images/nmap-scan.JPG)
 
 ## Changing the default password of the Pi & Set Hostname
 
