@@ -82,7 +82,7 @@ passwd
 
 * Get to config
 ```
-sudo aspi-config
+sudo raspi-config
 ```
 
 * Select 2. Network Options
