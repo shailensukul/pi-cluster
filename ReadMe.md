@@ -64,7 +64,7 @@ sudo apt install nmap
 nmap -sn 192.168.86.41/24 
 ```
 
-* You will the raspberry pis listed with the pi's hostname
+* You will be able to then view the raspberry pi's IP addresses alongside the pi's hostname
 
 ![NMap Results](/images/nmap-scan.JPG)
 
