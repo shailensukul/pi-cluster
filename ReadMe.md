@@ -177,3 +177,28 @@ If REPLICAS value is 1/1, so the service is ready.
 You can visit any node on port 8080 to see the service running, e.g.: http://pi-1:8080/
 
 ![Pi Visualizer](/images/pi-visualizer.JPG)
+
+## Troubleshooting
+
+### Issue: The swarm does not have a leader after demoting the Leader
+When running the following:
+
+```
+docker node ls
+```
+
+if you get this error:
+
+```
+Error response from daemon: rpc error: code = Unknown desc = The swarm does not have a leader. It's possible that too few managers are online. Make sure more than half of the managers are online.
+```
+
+then it means that a machine has been removed from the cluster, without demoting it and now there is no quorum, no leader and no way to promote a leader. 
+
+In this case, the swarm can be recreated using the same settings
+
+```
+docker swarm init --force-new-cluster
+```
+
+[Issue referenced here](https://github.com/moby/moby/issues/34384)
